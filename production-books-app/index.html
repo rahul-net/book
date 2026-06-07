@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>জাতীয় পাঠ্যপুস্তক লাইব্রেরি</title>
+
+<meta name="description" content="বাংলাদেশের জাতীয় শিক্ষাক্রমের Class 1 থেকে Class 10 পর্যন্ত সকল পাঠ্যবই এক জায়গায়।">
+<meta name="keywords" content="NCTB, Bangladesh Books, Textbooks, Class 1-10, Education">
+<meta name="author" content="NCTB Digital Library">
+<meta name="theme-color" content="#2563eb">
+
+<meta property="og:title" content="জাতীয় পাঠ্যপুস্তক লাইব্রেরি">
+<meta property="og:description" content="Class 1 থেকে Class 10 পর্যন্ত পাঠ্যবই">
+<meta property="og:type" content="website">
+<meta property="og:image" content="icons/icon-512.png">
+
+<link rel="manifest" href="manifest.webmanifest">
+
+<link rel="icon" href="icons/icon-192.png">
+
+<link rel="preconnect" href="https://drive.google.com">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/darkmode.css">
+
+</head>
+
+<body>
+
+<div id="app">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo-wrapper">
+                <div class="logo-icon">
+                    📚
+                </div>
+
+                <div class="logo-text">
+                    <h1>পাঠ্যবই</h1>
+                    <span>Digital Library</span>
+                </div>
+            </div>
+
+            <button
+                class="close-sidebar-btn"
+                id="closeSidebarBtn"
+                aria-label="Close Sidebar">
+                ✕
+            </button>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <button class="nav-item active" data-view="dashboard">
+                <span>🏠</span>
+                <span>Dashboard</span>
+            </button>
+
+            <button class="nav-item" data-view="favorites">
+                <span>⭐</span>
+                <span>Favorites</span>
+            </button>
+
+            <button class="nav-item" data-view="recent">
+                <span>🕒</span>
+                <span>Recent Books</span>
+            </button>
+
+        </nav>
+
+        <div class="class-section">
+
+            <h3>Classes</h3>
+
+            <div id="classList" class="class-list">
+
+                <button class="class-btn" data-class="all">
+                    All Books
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="sidebar-footer">
+
+            <button
+                id="themeToggle"
+                class="theme-btn"
+                aria-label="Toggle Theme">
+
+                🌙 Dark Mode
+
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- Overlay -->
+
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <!-- Topbar -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    id="menuBtn"
+                    class="menu-btn"
+                    aria-label="Open Menu">
+
+                    ☰
+
+                </button>
+
+                <div class="page-title">
+
+                    <h2 id="pageTitle">
+                        Dashboard
+                    </h2>
+
+                    <p id="pageSubtitle">
+                        National Textbook Collection
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button
+                    id="installBtn"
+                    class="install-btn hidden">
+
+                    Install App
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- Dashboard Stats -->
+
+        <section
+            class="stats-grid"
+            aria-label="Statistics">
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    📘
+                </div>
+
+                <div>
+
+                    <h3 id="totalBooks">
+                        0
+                    </h3>
+
+                    <p>Total Books</p>
+
+                </div>
+
+            </article>
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    🎓
+                </div>
+
+                <div>
+
+                    <h3 id="totalClasses">
+                        0
+                    </h3>
+
+                    <p>Classes</p>
+
+                </div>
+
+            </article>
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    ⭐
+                </div>
+
+                <div>
+
+                    <h3 id="favoriteCount">
+                        0
+                    </h3>
+
+                    <p>Favorites</p>
+
+                </div>
+
+            </article>
+
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    🕒
+                </div>
+
+                <div>
+
+                    <h3 id="recentCount">
+                        0
+                    </h3>
+
+                    <p>Recent</p>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- Search -->
+
+        <section class="search-section">
+
+            <div class="search-wrapper">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search books..."
+                    autocomplete="off"
+                    aria-label="Search Books">
+
+                <button
+                    id="clearSearch"
+                    class="clear-search">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Filters -->
+
+        <section class="filters-section">
+
+            <select id="classFilter">
+
+                <option value="all">
+                    All Classes
+                </option>
+
+            </select>
+
+            <select id="sortFilter">
+
+                <option value="name">
+                    Sort by Name
+                </option>
+
+                <option value="class">
+                    Sort by Class
+                </option>
+
+            </select>
+
+        </section>
+
+        <!-- Content -->
+
+        <section
+            id="contentArea"
+            class="content-area">
+
+            <div
+                id="loadingState"
+                class="loading-state">
+
+                <div class="spinner"></div>
+
+                <p>
+                    Loading Books...
+                </p>
+
+            </div>
+
+            <div
+                id="booksGrid"
+                class="books-grid">
+            </div>
+
+            <div
+                id="emptyState"
+                class="empty-state hidden">
+
+                <div class="empty-icon">
+                    📚
+                </div>
+
+                <h3>
+                    No Books Found
+                </h3>
+
+                <p>
+                    Try another search.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<!-- PDF Viewer -->
+
+<section
+    id="viewerModal"
+    class="viewer-modal">
+
+    <div class="viewer-container">
+
+        <div class="viewer-toolbar">
+
+            <div class="viewer-title">
+
+                <h3 id="viewerBookTitle">
+                    Book Viewer
+                </h3>
+
+            </div>
+
+            <div class="viewer-actions">
+
+                <button
+                    id="favoriteBtn"
+                    class="viewer-btn">
+
+                    ⭐
+
+                </button>
+
+                <button
+                    id="fullscreenBtn"
+                    class="viewer-btn">
+
+                    ⛶
+
+                </button>
+
+                <button
+                    id="openNewTabBtn"
+                    class="viewer-btn">
+
+                    ↗
+
+                </button>
+
+                <button
+                    id="closeViewerBtn"
+                    class="viewer-btn close-btn">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="viewer-body">
+
+            <iframe
+                id="pdfFrame"
+                title="PDF Viewer"
+                loading="lazy"
+                allowfullscreen>
+
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Templates -->
+
+<template id="bookCardTemplate">
+
+    <article class="book-card">
+
+        <div class="book-header">
+
+            <div class="book-icon">
+                📖
+            </div>
+
+            <button class="favorite-toggle">
+
+                ☆
+
+            </button>
+
+        </div>
+
+        <div class="book-content">
+
+            <div class="book-class">
+
+            </div>
+
+            <h3 class="book-title">
+
+            </h3>
+
+        </div>
+
+        <div class="book-footer">
+
+            <button class="open-book-btn">
+
+                Open Book
+
+            </button>
+
+        </div>
+
+    </article>
+
+</template>
+
+<script src="js/storage.js"></script>
+<script src="js/search.js"></script>
+<script src="js/viewer.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pwa.js"></script>
+
+</body>
+</html>

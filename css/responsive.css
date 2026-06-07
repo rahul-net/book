@@ -1,0 +1,539 @@
+/* ==========================================
+   LARGE DESKTOPS
+========================================== */
+
+@media (min-width: 1600px) {
+
+    .books-grid {
+
+        grid-template-columns:
+            repeat(auto-fill,minmax(320px,1fr));
+    }
+
+    .main-content {
+
+        padding: 32px;
+    }
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(4,1fr);
+    }
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media (max-width: 1400px) {
+
+    .books-grid {
+
+        grid-template-columns:
+            repeat(auto-fill,minmax(260px,1fr));
+    }
+}
+
+/* ==========================================
+   TABLET LANDSCAPE
+========================================== */
+
+@media (max-width: 1200px) {
+
+    :root {
+
+        --sidebar-width: 280px;
+    }
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    .books-grid {
+
+        grid-template-columns:
+            repeat(auto-fill,minmax(240px,1fr));
+    }
+
+    .page-title h2 {
+
+        font-size: 1.45rem;
+    }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+    .sidebar {
+
+        transform: translateX(-100%);
+
+        transition: transform .3s ease;
+    }
+
+    .sidebar.active {
+
+        transform: translateX(0);
+    }
+
+    .close-sidebar-btn {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 10px;
+
+        background: #f1f5f9;
+    }
+
+    .menu-btn {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+
+    .main-content {
+
+        margin-left: 0;
+    }
+
+    .topbar {
+
+        position: sticky;
+
+        top: 0;
+
+        z-index: 500;
+
+        background: var(--bg);
+
+        padding-bottom: 10px;
+    }
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+    .book-card {
+
+        min-height: 220px;
+    }
+
+    .viewer-toolbar {
+
+        padding: 0 12px;
+    }
+
+    .viewer-title h3 {
+
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================
+   SMALL TABLET
+========================================== */
+
+@media (max-width: 768px) {
+
+    .main-content {
+
+        padding: 18px;
+    }
+
+    .topbar {
+
+        flex-wrap: wrap;
+
+        height: auto;
+
+        gap: 12px;
+
+        align-items: flex-start;
+    }
+
+    .topbar-left {
+
+        width: 100%;
+    }
+
+    .topbar-right {
+
+        width: 100%;
+    }
+
+    .install-btn {
+
+        width: 100%;
+    }
+
+    .stats-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+
+        min-height: 100px;
+    }
+
+    .filters-section {
+
+        flex-direction: column;
+    }
+
+    .filters-section select {
+
+        width: 100%;
+
+        min-width: auto;
+    }
+
+    .books-grid {
+
+        grid-template-columns:
+            repeat(auto-fill,minmax(220px,1fr));
+
+        gap: 16px;
+    }
+
+    .book-card {
+
+        padding: 16px;
+    }
+
+    .search-wrapper input {
+
+        height: 54px;
+    }
+
+    .viewer-toolbar {
+
+        flex-direction: column;
+
+        height: auto;
+
+        gap: 10px;
+
+        padding: 12px;
+    }
+
+    .viewer-actions {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .viewer-btn {
+
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 576px) {
+
+    .main-content {
+
+        padding: 14px;
+    }
+
+    .page-title h2 {
+
+        font-size: 1.2rem;
+    }
+
+    .page-title p {
+
+        font-size: .85rem;
+    }
+
+    .sidebar {
+
+        width: 85%;
+        max-width: 320px;
+    }
+
+    .sidebar-header {
+
+        padding: 18px;
+    }
+
+    .logo-icon {
+
+        width: 46px;
+        height: 46px;
+
+        font-size: 20px;
+    }
+
+    .logo-text h1 {
+
+        font-size: 1rem;
+    }
+
+    .logo-text span {
+
+        font-size: .75rem;
+    }
+
+    .sidebar-nav {
+
+        padding: 16px;
+    }
+
+    .class-section {
+
+        padding: 0 16px 16px;
+    }
+
+    .sidebar-footer {
+
+        padding: 16px;
+    }
+
+    .theme-btn {
+
+        height: 48px;
+    }
+
+    .stat-card {
+
+        padding: 16px;
+    }
+
+    .stat-icon {
+
+        width: 48px;
+        height: 48px;
+
+        font-size: 20px;
+    }
+
+    .stat-card h3 {
+
+        font-size: 1.35rem;
+    }
+
+    .books-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .book-card {
+
+        min-height: auto;
+    }
+
+    .book-header {
+
+        margin-bottom: 14px;
+    }
+
+    .book-icon {
+
+        width: 50px;
+        height: 50px;
+
+        font-size: 22px;
+    }
+
+    .book-title {
+
+        font-size: 1rem;
+    }
+
+    .open-book-btn {
+
+        height: 46px;
+    }
+
+    .search-wrapper input {
+
+        font-size: 16px;
+    }
+
+    .clear-search {
+
+        width: 34px;
+        height: 34px;
+    }
+
+    .empty-state {
+
+        padding: 60px 16px;
+    }
+
+    .empty-icon {
+
+        font-size: 48px;
+    }
+
+    .viewer-container {
+
+        border-radius: 0;
+    }
+
+    .viewer-body {
+
+        height: calc(100vh - 120px);
+    }
+
+    #pdfFrame {
+
+        height: 100%;
+    }
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES
+========================================== */
+
+@media (max-width: 420px) {
+
+    .main-content {
+
+        padding: 12px;
+    }
+
+    .topbar-left {
+
+        gap: 10px;
+    }
+
+    .menu-btn {
+
+        width: 40px;
+        height: 40px;
+    }
+
+    .page-title h2 {
+
+        font-size: 1.05rem;
+    }
+
+    .page-title p {
+
+        display: none;
+    }
+
+    .search-wrapper input {
+
+        padding-left: 14px;
+        padding-right: 48px;
+    }
+
+    .stat-card {
+
+        gap: 12px;
+    }
+
+    .viewer-actions {
+
+        gap: 6px;
+    }
+
+    .viewer-btn {
+
+        width: 40px;
+        height: 40px;
+    }
+
+    .book-card {
+
+        padding: 14px;
+    }
+}
+
+/* ==========================================
+   LANDSCAPE PHONES
+========================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .sidebar {
+
+        overflow-y: auto;
+    }
+
+    .viewer-toolbar {
+
+        min-height: 60px;
+    }
+
+    .viewer-body {
+
+        height: calc(100vh - 60px);
+    }
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(4,minmax(0,1fr));
+    }
+}
+
+/* ==========================================
+   PRINT
+========================================== */
+
+@media print {
+
+    .sidebar,
+    .topbar,
+    .filters-section,
+    .search-section,
+    .viewer-modal,
+    .install-btn,
+    .theme-btn {
+
+        display: none !important;
+    }
+
+    .main-content {
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+    }
+
+    .books-grid {
+
+        display: block;
+    }
+
+    .book-card {
+
+        page-break-inside: avoid;
+
+        margin-bottom: 12px;
+
+        border: 1px solid #ccc;
+
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,442 @@
+/* ==========================================
+   DARK MODE VARIABLES
+========================================== */
+
+html.dark {
+
+    --bg: #0f172a;
+
+    --surface: #111827;
+
+    --text: #f8fafc;
+
+    --text-muted: #94a3b8;
+
+    --border: #1e293b;
+
+    --shadow-sm:
+        0 1px 2px rgba(0,0,0,.35);
+
+    --shadow-md:
+        0 8px 20px rgba(0,0,0,.45);
+
+    --shadow-lg:
+        0 20px 40px rgba(0,0,0,.55);
+}
+
+/* ==========================================
+   GLOBAL
+========================================== */
+
+html.dark body {
+
+    background: var(--bg);
+
+    color: var(--text);
+}
+
+html.dark ::selection {
+
+    background: rgba(37,99,235,.4);
+}
+
+html.dark a {
+
+    color: #60a5fa;
+}
+
+html.dark hr {
+
+    border-color: var(--border);
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+html.dark .sidebar {
+
+    background: #111827;
+
+    border-right-color: var(--border);
+}
+
+html.dark .sidebar-header {
+
+    border-bottom-color: var(--border);
+}
+
+html.dark .logo-icon {
+
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,.05);
+}
+
+html.dark .close-sidebar-btn {
+
+    background: #1e293b;
+
+    color: var(--text);
+}
+
+html.dark .nav-item {
+
+    color: var(--text);
+}
+
+html.dark .nav-item:hover {
+
+    background: rgba(59,130,246,.15);
+}
+
+html.dark .nav-item.active {
+
+    background: var(--primary);
+
+    color: white;
+}
+
+html.dark .class-btn {
+
+    background: #1e293b;
+
+    color: var(--text);
+
+    border: 1px solid transparent;
+}
+
+html.dark .class-btn:hover {
+
+    background: #263449;
+
+    border-color: rgba(96,165,250,.25);
+}
+
+html.dark .class-btn.active {
+
+    background: var(--primary);
+
+    color: #fff;
+
+    border-color: var(--primary);
+}
+
+html.dark .sidebar-footer {
+
+    border-top-color: var(--border);
+}
+
+/* ==========================================
+   MAIN
+========================================== */
+
+html.dark .main-content {
+
+    background: var(--bg);
+}
+
+html.dark .topbar {
+
+    background: var(--bg);
+}
+
+html.dark .menu-btn {
+
+    background: #1e293b;
+
+    color: var(--text);
+
+    box-shadow: none;
+
+    border: 1px solid var(--border);
+}
+
+html.dark .install-btn {
+
+    background: #059669;
+}
+
+html.dark .install-btn:hover {
+
+    background: #047857;
+}
+
+/* ==========================================
+   STATS
+========================================== */
+
+html.dark .stat-card {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    box-shadow: none;
+}
+
+html.dark .stat-icon {
+
+    background: rgba(37,99,235,.15);
+}
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+html.dark .search-wrapper input {
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    border-color: var(--border);
+
+    box-shadow: none;
+}
+
+html.dark .search-wrapper input::placeholder {
+
+    color: #64748b;
+}
+
+html.dark .clear-search {
+
+    background: #1e293b;
+
+    color: var(--text);
+}
+
+/* ==========================================
+   FILTERS
+========================================== */
+
+html.dark .filters-section select {
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    border-color: var(--border);
+}
+
+html.dark .filters-section option {
+
+    background: #111827;
+
+    color: var(--text);
+}
+
+/* ==========================================
+   BOOK CARDS
+========================================== */
+
+html.dark .book-card {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    box-shadow: none;
+}
+
+html.dark .book-card:hover {
+
+    border-color: rgba(96,165,250,.35);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.35);
+}
+
+html.dark .book-icon {
+
+    background: rgba(37,99,235,.15);
+}
+
+html.dark .book-class {
+
+    color: #60a5fa;
+}
+
+html.dark .favorite-toggle {
+
+    background: #1e293b;
+
+    color: var(--text);
+}
+
+html.dark .favorite-toggle:hover {
+
+    background: #263449;
+}
+
+html.dark .favorite-toggle.active {
+
+    color: #fbbf24;
+}
+
+html.dark .open-book-btn {
+
+    background: var(--primary);
+}
+
+html.dark .open-book-btn:hover {
+
+    background: var(--primary-hover);
+}
+
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+html.dark .empty-state {
+
+    color: var(--text);
+}
+
+html.dark .empty-state p {
+
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+html.dark .loading-state {
+
+    color: var(--text);
+}
+
+html.dark .spinner {
+
+    border-color: #1e293b;
+
+    border-top-color: #60a5fa;
+}
+
+/* ==========================================
+   VIEWER
+========================================== */
+
+html.dark .viewer-modal {
+
+    background: rgba(0,0,0,.9);
+}
+
+html.dark .viewer-container {
+
+    background: #0f172a;
+}
+
+html.dark .viewer-toolbar {
+
+    background: #111827;
+
+    border-bottom-color: var(--border);
+}
+
+html.dark .viewer-title h3 {
+
+    color: var(--text);
+}
+
+html.dark .viewer-btn {
+
+    background: #1e293b;
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+}
+
+html.dark .viewer-btn:hover {
+
+    background: #263449;
+}
+
+html.dark .close-btn {
+
+    background: rgba(239,68,68,.15);
+
+    color: #f87171;
+
+    border-color: rgba(239,68,68,.25);
+}
+
+html.dark .close-btn:hover {
+
+    background: rgba(239,68,68,.25);
+}
+
+html.dark #pdfFrame {
+
+    background: white;
+}
+
+/* ==========================================
+   OVERLAY
+========================================== */
+
+html.dark .overlay {
+
+    background: rgba(0,0,0,.65);
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+html.dark ::-webkit-scrollbar {
+
+    width: 10px;
+
+    height: 10px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+
+    background: #0f172a;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+
+    background: #334155;
+
+    border-radius: 999px;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+
+    background: #475569;
+}
+
+/* ==========================================
+   FOCUS STATES
+========================================== */
+
+html.dark button:focus-visible,
+html.dark input:focus-visible,
+html.dark select:focus-visible {
+
+    outline: 2px solid #60a5fa;
+
+    outline-offset: 2px;
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html.dark * {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+}
